@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: fantasy;
+}
+
+h1 {
+  padding: 2.5%;
+}
+
+ul {
+  background: #21252B;
+  padding: 2% 0%;
+  padding-left: 10%;
+}
+
+h2 {
+  margin: 5%;
+  font-size: 250%;
+  font-family: monospace;
+}
+
+p {
+  border-top: 5px solid powderblue;
+  padding: 5% 10%;
+  text-align: justify;
+}
+
+.espacios {
+  margin: 2.5%;
+  background: #20A0BA;
+}
+
+.margin{
+    margin: 7%;
+    background: #A5073E;
+}
+
+.padding {
+  padding: 5%;
+  background: #DD042B;
+}
+
+.g-links {
+  margin-top: 5%;
+}
+
+.g-links > a:link {
+  color: red;
+}
+
+.g-links > a:visited {
+  color: blue;
+}
+
+.g-links > a:hover {
+  color: green;
+}
+
+.g-links > a:active {
+  color: yellow;
+}
+
+img {
+  float: right;
+  margin: 0% 0% 5% 5%;
+}
+
+.imagen {
+  width: 100%;
+}
+
+picture {
+  width: 100%;
+  align-content: center;
+}

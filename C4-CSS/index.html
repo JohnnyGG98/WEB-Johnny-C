@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Practicando CSS</title>
+    <link rel="stylesheet" href="main.css">
+
+    <style media="screen">
+      header {
+        background: #3B3C3C;
+        color: rgba(221, 4, 43, 0.8);
+      }
+      header > h1 {
+        color: rgba(32, 160, 186, 0.9);
+        text-align: center;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <header>
+      <h1>Usando CSS</h1>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Java Script</li>
+      </ul>
+    </header>
+
+    <hr>
+      <a href="#links">Ir a los links</a>
+    <hr>
+
+
+    <article class="">
+      <h2>Usando HTML</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </article>
+
+    <article class="espacios">
+      <h2>Espacios</h2>
+      <div class="margin">
+        <span>Este es el margen.</span>
+        <div class="padding">
+          <span>Este es el padding.</span>
+        </div>
+      </div>
+
+    </article>
+
+    <hr>
+
+    <article id="links">
+      <h2>Estos son links con otro estilo</h2>
+      <div class="g-links">
+          <a href="pagina.html">Ir a mi pagina</a>
+          <a target="_blank" href="https://www.google.com/">Google</a>
+          <a target="_blank" href="https://twitter.com/">Twitter</a>
+      </div>
+    </article>
+
+    <article class="">
+      <h2>Usando gifs</h2>
+      <p><img src="https://media2.giphy.com/media/8m4R4pvViWtRzbloJ1/200w.webp?cid=790b76115cfe902a6e7a6b427356183d&rid=200w.webp" alt="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <img src="https://media0.giphy.com/media/mCRJDo24UvJMA/200.webp?cid=790b76115cfe902a6e7a6b427356183d&rid=200.webp" alt="">
+    </article>
+
+    <article class="">
+      <h2>Mapas de bits</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+      <img src="https://images.pexels.com/photos/163036/mario-luigi-yoschi-figures-163036.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="" class="imagen" usemap="#lym">
+
+      <map name="lym" >
+        <area shape="rect" coords="0, 45, 170, 350" alt="luigi" href="luigi.html" target="_blank">
+        <area shape="rect" coords="170,45, 310, 650" alt="yoshi" href="yoshi.html" target="_blank">
+        <area shape="rect" coords="310, 45, 950, 1500" alt="mario" href="mario.html" target="_blank">
+      </map>
+
+
+    </article>
+
+    <article class="">
+      <h2>La imagen deberia cambiar</h2>
+      <picture>
+        <source media="(min-width: 650px)" srcset="https://images.pexels.com/photos/2433353/pexels-photo-2433353.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+        <source media="(min-width: 465px)" srcset="https://images.pexels.com/photos/2404007/pexels-photo-2404007.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500">
+        <img src="https://images.pexels.com/photos/2404100/pexels-photo-2404100.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+      </picture>
+    </article>
+
+    <footer>
+    </footer>
+
+  </body>
+</html>
