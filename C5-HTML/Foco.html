@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Foco</title>
+  </head>
+
+  <script type="text/javascript">
+    function luz(estado) {
+      var pic;
+      console.log("CLICKKKKK... "+estado)
+      if(estado == 0){
+        pic = "https://cdn1.coppel.com/images/catalog/pm/5170713-1.jpg";
+      }else{
+        pic = "https://www.definicionabc.com/wp-content/uploads/2013/05/Foco.jpg";
+      }
+      document.getElementById("miFoco").src = pic;
+    }
+  </script>
+
+  <body>
+      <img  id="miFoco" src="https://cdn1.coppel.com/images/catalog/pm/5170713-1.jpg" alt="foco" width="250" width="250">
+
+      <p>
+        <button type="button" onclick="luz(0);">Apagalo ...</button>
+        <button type="button" onclick="luz(1);">Prendelo</button>
+      </p>
+  </body>
+</html>

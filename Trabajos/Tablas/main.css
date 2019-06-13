@@ -1,0 +1,20 @@
+#tabla1 {
+  border-spacing: 15px;
+  font-size: 50px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+
+td {
+  margin: 5px;
+}
+
+.tabla2 {
+  font-size: 50px;
+  margin: 0 auto;
+}
+
+h3 {
+  text-align: center;
+}

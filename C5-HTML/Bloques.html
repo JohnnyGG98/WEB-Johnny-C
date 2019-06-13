@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Trabajando con elementos de bloque</title>
+    <link rel="stylesheet" href="bloques.css">
+  </head>
+  <body>
+    <h2>Elementos de bloque</h2>
+    <div class="">
+      Hola
+    </div>
+    <div class="">
+      Mundo!
+    </div>
+
+    <h2>Elementos en linea</h2>
+    <span>Hola </span>
+    <span>Mundo!</span>
+
+
+    <div id="estilo1">
+      <h3>Un ejemplo</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+    <h1>Un titulo <span style="color:red;">importante</span></h1>
+    <h2>Usaremos clases</h2>
+    <div class="articulos">
+      <h2>Art 1</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="articulos">
+      <h2>Art 2</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat <span class="note">nulla pariatur.</span>  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="articulos">
+      <h2>Art 3</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu <span class="note">fugiat nulla pariatur.</span> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="articulos">
+      <h2 class="cetrar">Art 4</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </body>
+
+  <button type="button" name="button" onclick="miFuncion();">Esconder elmentos</button>
+
+  <h1 id="miHead">
+    M I <span> - </span>  H E A D
+  </h1>
+
+  <h1>Usando frames</h1>
+
+  <iframe src="Listas.html" width="100%" height="300"></iframe>
+
+  <h1>Ver W3School</h1>
+  <iframe src="Tables.html" width="100%" height="300" name="iframe_w3"></iframe>
+  <p><a href="https://www.w3schools.com/default.asp" target="iframe_w3">W3</a> </p>
+
+  <h1>Ver PDF</h1>
+  <iframe src="Tables.html" width="100%" height="400" name="pdf"></iframe>
+  <p><a href="http://ocw.udl.cat/enginyeria-i-arquitectura/programacio-2/continguts-1/1-introduccio301n-a-java.pdf" target="pdf">PDF</a></p>
+
+  <script type="text/javascript">
+    function miFuncion() {
+      console.log('Click');
+      var x = document.getElementsByClassName("articulos");
+      for(var i = 0; i < x.legend; i++){
+        x[i].style.display = "none";
+        console.log(x[i]);
+      }
+    }
+
+    function cambiarTitulo() {
+      document.getELementById("miHead").innerHtml("H A V E - A - N I C E - D A Y");
+    }
+  </script>
+</html>

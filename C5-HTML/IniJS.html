@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Utilizando Java Script</title>
+  </head>
+  <body>
+    <button type="button" name="button" onclick="cambiar();">Saluda</button>
+    <h1 id="titulo">Hola</h1>
+
+    <h2>Esta es mi otra page</h2>
+    <iframe src="Foco.html" width="100%" height="400"></iframe>
+  </body>
+
+  <script type="text/javascript">
+    function cambiar() {
+        document.getElementById("titulo").innerHTML = "Hola Java Script";
+        document.getElementById("titulo").style.backgroundColor = "black";
+        document.getElementById("titulo").style.color = "white";
+    }
+
+  </script>
+</html>

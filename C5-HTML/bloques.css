@@ -1,0 +1,40 @@
+#estilo1 {
+  background-color: black;
+  color: white;
+  text-align: justify;
+  padding: 5px 15px;
+  margin: 5px;
+}
+
+.articulos {
+  background-color: grey;
+  color: black;
+  text-align: right;
+  padding: 15px;
+  margin: 10px;
+}
+
+.articulos > h2 {
+  padding: 0 10px;
+  color: white;
+}
+
+.centrar  {
+  text-align: center;
+}
+
+span.note {
+  color: white;
+}
+
+#miHead {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+}
+
+iframe {
+  /*border: none;*/
+  border-color: grey;
+}
