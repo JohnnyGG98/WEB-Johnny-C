@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 2.5% 0;
+}
+
+nav {
+  background-color: grey;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  list-style: none;
+}
+
+nav > li {
+  list-style: none;
+  float: left;
+}
+
+nav > li, a{
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+nav > li, a:hover{
+  color: white;
+  background-color: #3B3C3C;
+}
+
+section {
+  float: left;
+  width: 60%;
+  padding: 1% 2.5%;
+  border: solid 1px red;
+}
+
+article {
+  float: left;
+  width: 60%;
+  padding: 1% 2.5%;
+  border: solid 1px blue;
+}
+
+.aside-d {
+  float: right;
+  width: 25%;
+  padding: 2.5%;
+  border: solid 1px orange;
+  height: 100%;
+}
+
+footer > *{
+  background-color: black;
+  color: white;
+  text-align: justify;
+}
+
+.ini-foot {
+  background-color: red;
+  width: 100%;
+  height: 1%;
+  flex: 3;
+}
+
+.foot-d {
+  float: right;
+  width: 20%;
+  padding: 1% 2.5%;
+}
+
+.foot-i {
+  float: left;
+  width: 70%;
+  padding: 1% 2.5%;
+}
