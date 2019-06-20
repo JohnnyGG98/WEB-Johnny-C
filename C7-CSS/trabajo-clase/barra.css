@@ -1,0 +1,58 @@
+ul.bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.bar > li {
+  float: left;
+}
+
+ul.bar li a{
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.bar li a:hover:not(.salir){
+  background-color: #74b9ff;
+  color: black;
+}
+
+ul.bar li.salir a:hover {
+  background-color: #d63031;
+  color: white;
+}
+
+ul.bar li.derecha {
+  float: right;
+}
+
+.det-forms {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.det-forms a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.det-forms a:hover {
+  background-color: #f1f1f1;
+}
+
+.formularios:hover .det-forms {
+  display: block;
+}

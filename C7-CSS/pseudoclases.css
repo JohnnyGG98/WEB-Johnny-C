@@ -1,0 +1,60 @@
+.rect {
+  width: 200px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: green;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
+
+.rect:hover {
+  background-color: lightblue;
+  color: black;
+}
+
+::selection {
+  color: red;
+  background-color: yellow;
+  font-size: 40px;
+}
+
+img.opacity-1 {
+  opacity: 0.3;
+  filter: alpha(opacity=50); /*Para versiones de internet explorer menores a 8*/
+}
+
+img.opacity-1:hover {
+  opacity: 1.0;
+}
+
+/*Barra e navegacion*/
+ul.nav-v {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+li.i-v a.l-v {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  padding: 8px 16px;
+}
+/*
+li a:hover {
+  background-color: #555;
+  color: white;
+}*/
+
+li.i-v a.l-v:active {file:///home/alumno/Documentos/Web-Johnny/WEB-Johnny-C/C7-CSS/pseudoclases.html
+  background-color: green;
+  color: white;
+}
+
+li.i-v a.l-v:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
