@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0984e3;
+  position: sticky;
+  top: 0;
+}
+
+ul.topnav li {
+  float: left;
+}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a::before {
+
+}
+
+ul.topnav li a:hover:not(.salir) {
+  background-color: #74b9ff;
+  color: black;
+}
+
+ul.topnav li.salir a:hover {
+  background-color: #d63031;
+  color: white;
+}
+/*
+ul.topnav li.dropdow {
+  position: relative;
+  display: inline-block;
+}*/
+
+ul.topnav li.dropdow div.dropdow-items {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+ul.topnav li.dropdow div.dropdow-items a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+ul.topnav li.dropdow div.dropdow-items a:hover {
+  background-color: #f1f1f1
+}
+/*
+ul.topnav li.dropdow a:hover .dropdow-items {
+  display: block;
+}*/
+
+ul.topnav li.dropdow a:hover .salir {
+  background-color: red;
+  color: red;
+  /*display: block;*/
+}
+
+ul.topnav li.derecha {
+  float: right;
+}
+
+@media screen and (max-width: 600px) {
+  ul.topnav {
+    position: static;
+  }
+
+  ul.topnav li.right,
+  ul.topnav li {
+    float: none;
+  }
+
+  ul.topnav li.derecha{
+    float: none;
+  }
+}
+
+section {
+  padding: 1% 5%;
+}
+
+img.opacity-1 {
+  opacity: 0.3;
+  margin: auto;
+
+}
+#imagen {
+  border: solid 5 red;
+}
+
+img.opacity-1:hover {
+  opacity: 1.0;
+}
