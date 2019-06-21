@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Usando Java Script</title>
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/bar.css">
+  </head>
+  <body id="fondo">
+
+    <div class="bar">
+
+    </div>
+
+    <h1 id="titulo">Bienvenido</h1>
+
+    <button type="button" onclick="cambiaTitulo()" name="button">Click, para cambiar el titulo</button>
+
+    <h2 id="subtitulo"> Es un subtitulo</h2>
+
+    <button type="button" onclick="cambiaSubTitulo()" name="button">Click, para cambiar el sub titulo</button>
+
+    <button type="button" onclick="cambiarFondo()" name="button">Click, para cambiar el fondo</button>
+
+
+    <script type="text/javascript">
+      function cambiaTitulo() {
+          document.getElementById("titulo").innerHTML = "Mi primer Java Script";
+      }
+    </script>
+
+    <script type="text/javascript" src="javascript.js"></script>
+
+  </body>
+</html>

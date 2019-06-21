@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Usando una animacion</title>
+    <link rel="stylesheet" href="bar.css">
+  </head>
+  <body>
+
+    <div class="bar">
+      <h1>Mi primera animacion</h1>
+    </div>
+
+    <button type="button" name="button" onclick="mover()">Animate</button>
+
+    <div class="contenedor">
+      <div class="cuadrado" id="cuadro">
+
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      function mover() {
+        console.log("ANimateeee");
+        var cuadro = document.getElementById("cuadro");
+        var pos = 0;
+        var pos2 = -1;
+        var pos3 = -1;
+        var id = setInterval(rebota, 5);
+        function rebota(){
+
+          if(pos3 == 0){
+            clearInterval(id);
+          }
+
+          if(pos3 == pos){
+            pos3--;
+            console.log("posss "+pos3)
+            cuadro.style.left = pos3 + "px";
+          }
+
+          if(pos2 == 0){
+            pos3 = pos;
+            pos2 = 1;
+          }
+
+
+          if(pos == 350){
+            /*clearInterval(id);*/
+            pos2--;
+            cuadro.style.top = pos2 + "px";
+            /*cuadro.style.left = pos + "px";*/
+          }else if(pos < 350){
+            console.log("cambiando de posss");
+            pos++;
+            cuadro.style.top = pos + "px";
+            cuadro.style.left = pos + "px";
+            pos2 = pos;
+          }
+
+        }
+      }
+    </script>
+
+  </body>
+</html>
