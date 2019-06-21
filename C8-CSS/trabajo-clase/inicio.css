@@ -1,0 +1,49 @@
+.btn-saludo {
+    margin: 5% auto;
+    text-align: center;
+    background-color: #01a3a4;
+    padding: 15px;
+    font-size: 1.8em;
+    width: 40%;
+    color: white;
+}
+
+.btn-saludo:hover {
+  background-color: #00d2d3;
+  cursor: pointer;
+}
+
+.helou-tyr {
+  display: none;
+  position: absolute;
+  margin: 15px auto;
+  background-color: #f9f9f9;
+  min-width: 35%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.btn-saludo:hover .helou-tyr {
+  display: block;
+}
+
+.msg-tyr {
+  padding: 15px;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+}
+
+.spam {
+  display: none;
+  position: absolute;
+  margin: 15px auto;
+  float: right;
+  color: white;
+  background-color: black;
+  min-width: 80%;
+}
+
+.msg-tyr:hover .spam {
+  display: block;
+}

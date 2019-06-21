@@ -1,0 +1,30 @@
+section {
+  margin: 30px auto;
+  /*position: absolute;*/
+}
+
+div.img-normal {
+  margin: 5px;
+  border: solid 1px #ccc;
+  border-top: solid 5px #ff6b6b;
+  float: left;
+  width: 200px;
+  box-shadow: 0px 2px 9px 0px rgba(238, 82, 83, 0.4);
+  transition: width 1s;
+}
+
+div.img-normal:hover {
+  border: solid 1px #ff6b6b;
+  border-bottom: solid 5px #ff6b6b;
+  width: 250px;
+}
+
+div.img-normal img {
+  width: 100%;
+  height: auto;
+}
+
+div.des-img {
+  padding: 15px;
+  text-align: center;
+}

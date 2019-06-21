@@ -1,0 +1,62 @@
+.principal {
+  margin: 20px 10%;
+  /*background-color: #01a3a4;*/
+  border-left: solid 20px #ee5253;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 10px 18px 0px rgba(16, 172, 132, 0.6);
+}
+
+input[type=text], textarea {
+  width: 90%;
+  margin-left: 20px;
+  padding: 10px 20px;
+  border: solid 1px #ccc;
+  border-left: solid 7px #ff6b6b;
+  border-radius: 5px;
+  resize: vertical;
+  font-size: 1.2em;
+  font-family: sans-serif;
+}
+
+label {
+  margin: 10px;
+  padding: 10px;
+  padding-right: 0;
+  display: inline-block;
+  font-size: 1.2em;
+}
+
+.lbl {
+    width: 100%;
+    float: left;
+}
+
+.txt {
+  width: 100%;
+  float: left;
+}
+
+.fila::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+input[type=submit] {
+  background-color: #01a3a4;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 95%;
+  margin: 15px 20px;
+  align-self: center;
+  font-size: 1.2em;
+}
+
+input[type=submit]:hover {
+  background-color: #00d2d3;
+}
