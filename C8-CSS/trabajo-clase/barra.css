@@ -5,6 +5,7 @@ ul.bar {
   overflow: hidden;
   background-color: #1dd1a1;
   box-shadow: 0px 8px 16px 0px rgba(16, 172, 132, 0.4);
+  overflow: hidden;
 }
 
 ul.bar > li {

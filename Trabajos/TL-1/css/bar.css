@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul.bar {
+  background-color: #3d3d3d;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-shadow: 0px 8px 16px 0px rgba(75, 75, 75, 0.5);
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+ul.bar li {
+  padding: 15px 20px;
+  display: inline-block;
+  transition: all 0.5s;
+}
+
+ul.bar li a {
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  display: inline-block;
+  font-size: 1.2em;
+}
+
+ul.bar li:hover:not(.b-logo) {
+  border-bottom: solid 2px #ff4d4d;
+}
+
+.b-logo {
+  background-color: #ff3838;
+  font-size: 1.4em;
+  color: white;
+}
