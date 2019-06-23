@@ -54,7 +54,9 @@
 .tbl-img-flor{
   width: 200px;
   height: 200px;
-  margin-left: 20%;
+  /*margin-left: 20%;*/
+  display: block;
+  margin: 10px auto;
 }
 
 .centrar {
