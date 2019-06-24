@@ -48,10 +48,49 @@ $(document).ready(function(){
     $("#btn-infinito").click(function(){
       $("#caja-infinita").slideToggle(5000);
     });
-    $("btn-parar").click(function(){
-      $("caja-infinita").stop();
+    $("#btn-parar").click(function(){
+      $("#caja-infinita").stop();
+    });
+
+    $("#btn-call-m").click(function(){
+      $("#barra").show("slow", function(){
+        $("#sub-barra").animate({
+          width: $("#barra").width()
+        }, 3000);
+      });
+    });
+
+    $("#btn-call-o").click(function(){
+        $("#sub-barra").animate({
+          width: '0px'
+        }, 3000,  function(){
+          $("#barra").hide("slow");
+        });
+    });
+
+
+    $("#btn-ch").click(function(){
+      $("#ojo-iz").animate({
+        marginTop: "75px"
+      }, "slow", function(){
+        cambiarColorFondo("#FEA47F");
+      }).animate({
+        marginLeft: "75px"
+      }, "slow", function(){
+        cambiarColorFondo("#EAB543");
+      }).animate({
+        marginTop: "0px"
+      }, "slow", function(){
+        cambiarColorFondo("#182C61");
+      }).animate({
+        marginLeft: "0px"
+      });
     });
 });
+
+function cambiarColorFondo(color){
+  $("#cuadrado").css("background-color", color);
+}
 
 function bajarScroll(){
   $("html, body").animate({ scrollTop: $(document).height() }, "slow");

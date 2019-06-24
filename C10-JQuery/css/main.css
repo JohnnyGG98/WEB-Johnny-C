@@ -81,3 +81,34 @@ h1 {
   background-color: #182C61;
   margin: 5px 10%;
 }
+
+#barra {
+  width: 80%;
+  height: 50px;
+  background-color: rgba(24, 44, 97, 0.6);
+  margin: 5px 10%;
+}
+
+#sub-barra {
+  width: 0;
+  height: 50px;
+  background-color: rgba(24, 44, 97, 1.0);
+}
+
+#cuadrado {
+  height: 100px;
+  width: 100px;
+  background-color: #2C3A47;
+  margin: 0 auto;
+  margin-bottom: 10%;
+}
+
+#ojo-iz {
+  height: 25px;
+  width: 25px;
+  background-color: #CAD3C8;
+  border-radius: 25px;
+  display: block;
+  float: left;
+  /*margin: 10px 15px;*/
+}
