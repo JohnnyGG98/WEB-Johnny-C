@@ -1,0 +1,14 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.publicidad {
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  background-color: #ffb142;
+  color: white;
+  width: 100%;
+}
