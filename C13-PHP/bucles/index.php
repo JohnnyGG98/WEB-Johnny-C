@@ -37,6 +37,25 @@
     ),
   );
 
+
+    echo '<table border="1">';
+    foreach ($ad as $key => $value) {
+      //var_dump($ad[$key]);
+      //echo "<hr>";
+      echo "<tr>";
+      foreach ($ad[$key] as $key2 => $value2) {
+        //var_dump($ad[$key][$key2]);
+        //echo "<hr>";
+        echo "<th>".$ad[$key][$key2]."</th>";
+      }
+      echo "</tr>";
+    }
+    echo "</table>";
+
+    echo "<hr>";
+
+
+
   //No funciona
   /*for ($i=0; $i < sizeof($ad); $i++) {
     var_dump($ad[$i]);
@@ -56,6 +75,7 @@
     'Ed' => 45,
     'Frank' => 25
   );
+
 
   function imprimirArray($a){
     foreach ($a as $key => $value) {
