@@ -1,0 +1,29 @@
+#barra {
+  background-color: black;
+  /*display: block;*/
+  text-align: center;
+}
+
+#barra li {
+  list-style: none;
+  display: inline-block;
+  /*background-color: grey;*/
+  padding: 10px 15px;
+}
+
+#barra li a {
+  text-decoration: none;
+  padding: 5px 20px;
+  font-size: 30px;
+  color: white;
+}
+
+#barra li a:hover{
+  border-bottom: solid 2px red;
+  /*background-color: yellow;*/
+}
+
+
+.seleccionado {
+  border-bottom: solid 2px #FF0040;
+}

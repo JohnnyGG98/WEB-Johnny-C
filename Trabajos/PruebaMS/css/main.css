@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.margin {
+  margin: 1% 10%;
+  /*background-color: yellow;*/
+}
+
+.marginx2 {
+  margin: 2% 13%;
+}
+
+/*Estilo de la barra de navegacion*/
+#head {
+  background-color: #ccc;
+  width: 100%;
+  /*border: solid 1px red;*/
+}
+
+#navegacion {
+  margin: 0 10%;
+  height: 100%;
+}
+
+#navegacion ul li {
+  display: inline-block;
+  margin: 1.5% 1%;
+  padding: 15px;
+}
+
+#navegacion ul li:hover:not(.no-hover) {
+  background-color: grey;
+}
+
+#navegacion ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+#inicio {
+  font-size: 2em;
+}
+
+/*Estilo del footer*/
+
+#foot {
+  width: 100%;
+  background-color: black;
+  display: inline-block;
+}
+
+#foot ul li {
+  margin: 5px;
+  list-style: none;
+  font-size: 1.1em;
+  font-weight: 400;
+  color: white;
+}
+
+#foot ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+#foot-left {
+    width: 50%;
+    display: inline-block;
+}
+
+#foot-right {
+  width: 50%;
+  float: right;
+}
+
+.creditos-icons {
+  margin: 0.5% 15%;
+  text-align: center;
+}
+
+.creditos-icons  a {
+  text-decoration: none;
+  text-align: center;
+}
+
+/*Estilo secciones*/
+
+.img-sis {
+  height: 200px;
+  width: 350px;
+  float: right;
+  margin: 1%;
+}
+
+.parrafos {
+  margin: 1.5% 0;
+  font-size: 1.3em;
+  font-family: sans-serif;
+  text-align: justify;
+}
+
+.tit-art {
+  font-size: 1.5em;
+  margin-bottom: 2%;
+}
+
+.creditos {
+  margin: 10px 0;
+  background-color: #c1c1c1;
+}
+
+.creditos ul li {
+  list-style: none;
+  margin: 0.7%;
+}
+
+.creditos ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+/*Estilo al saludar*/
+#saludar {
+  text-align: center;
+  border-top: solid 10px #ccc;
+}
+
+#saludo-ctn {
+  margin-top: 1.5%;
+}
+
+#txtNombre {
+  width: 50%;
+}
