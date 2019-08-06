@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.bg-gris {
+  background: #485460 !important;
+}
+
+.bg-negro {
+  background: #1e272e !important;
+}
+
+.img-redsocial-size {
+  height: 150px;
+  width: 150px;
+}
