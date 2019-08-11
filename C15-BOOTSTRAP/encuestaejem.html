@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <!--Barra de navegacion-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+      <a class="navbar-brand" href="#" style="font-size: 1.7em;">TFORM</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav" style="font-size: 1.4em;">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="encuestaejem.html">Ejemplo Encuesta</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--/Barra de navegacion-->
+
+    <!--Llenar una encuesta-->
+    <div class="container my-5">
+      <div class="row">
+
+        <div class="col-md-6 mx-auto">
+
+          <div class="progress my-3">
+            <div id="barra-form" class="progress-bar" role="progressbar" style="width: 0%" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+
+          <form class="needs-validation" novalidate action="#" method="post">
+
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="ianonimo" data-toggle="collapse" data-target="#datospersonales">
+              <label class="custom-control-label" for="ianonimo">Hacer la encuesta anonima.</label>
+            </div>
+
+            <div id="datospersonales" class="form-row collapse show my-2">
+              <div class="col">
+                <label for="txtNombre">Nombre:</label>
+                <input type="text" class="form-control" id="inombre" name="txtNombre" placeholder="Ingrese su nombre" required>
+                <div class="invalid-feedback">
+                  Debe ingresar su nombre es obligatorio.
+                </div>
+              </div>
+              <div class="col">
+                <label for="txtApellido">Apellido:</label>
+                <input type="text" class="form-control" id="iapellido" name="txtApellido" placeholder="Ingrese su apellido" required>
+                <div class="invalid-feedback">
+                  Debe ingresar su apellido es obligatorio.
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="itv">Seleccione cuantas horas al dia ve TV: <span class="badge badge-danger">Requerido</span> </label>
+              <div id="itv">
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="iunomas" class="custom-control-input" name="htv" required>
+                  <label class="custom-control-label" for="iunomas">1 a 2.</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="idosmas" class="custom-control-input" name="htv" required>
+                  <label class="custom-control-label" for="idosmas">3 a 4.</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="icuatromas" class="custom-control-input" name="htv" required>
+                  <label class="custom-control-label" for="icuatromas">4 a mas.</label>
+                  <div class="invalid-feedback">
+                    Debe seleccionar una opcion
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="">Seleccione uno o mas series que ha visto: <span class="badge badge-danger">Requerido</span></label>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="iserieuno" name="iserie">
+                <label class="custom-control-label" for="iserieuno">Lost</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="iseriedos" name="iserie">
+                <label class="custom-control-label" for="iseriedos">The hundred</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="iserietres" name="iserie">
+                <label class="custom-control-label" for="iserietres">Mr. Robot</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="isericuatro" name="iserie">
+                <label class="custom-control-label" for="isericuatro">How I met your mother</label>
+              </div>
+              <div class="invalid-feedback">
+                Debe seleccionar una opcion
+              </div>
+
+            </div>
+
+            <div class="form-group">
+              <label for="itv">Tiene una serie favorita: <span class="badge badge-danger">Requerido</span></label>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="isiseriefavorita" class="custom-control-input" name="sf" required>
+                <label class="custom-control-label" for="isiseriefavorita">Si</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="inoseriefavorita" class="custom-control-input" name="sf" required>
+                <label class="custom-control-label" for="inoseriefavorita">No</label>
+                <div class="invalid-feedback">
+                  Debe seleccionar una opcion
+                </div>
+              </div>
+            </div>
+
+            <div id="nombreseriefavorita" class="form-group ocultar-div">
+              <label for="txtSerieFavorita">Serie favorita:</label>
+              <input type="text" id="inombreseriefavorita" class="form-control" name="txtSerieFavorita" placeholder="Ingrese el nombre de su serie favorita">
+              <div class="invalid-feedback">
+                Debe escriber el nombre de su serie favorita
+              </div>
+            </div>
+
+            <button class="btn btn-primary" type="submit" onclick="validar()">Enviar Formulario</button>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+    <!--Llenar una encuesta-->
+
+    <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        isAnonima();
+        nombreSerie();
+        obtenerInputsForm();
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+
+    function validar(){
+        validarCbx();
+    }
+
+    function validarCbx(){
+      var cbxs = document.getElementsByName("iserie");
+      var nums = 0;
+      for (var i = 0; i < cbxs.length; i++) {
+        if(cbxs[i].type == "checkbox"){
+          if(cbxs[i].checked === true){
+            nums++;
+          }
+        }
+      }
+      if(nums === 0){
+        for (var i = 0; i < cbxs.length; i++) {
+          cbxs[i].setAttribute('required', '');
+        }
+      }else{
+        for (var i = 0; i < cbxs.length; i++) {
+          cbxs[i].removeAttribute('required');
+        }
+      }
+    }
+
+    function isAnonima(){
+      var cbx = document.getElementById('ianonimo');
+      var inom = document.getElementById('inombre');
+      var iape = document.getElementById('iapellido');
+      cbx.addEventListener('change', function(){
+        if(this.checked){
+          noRequeridoPorId('inombre');
+          noRequeridoPorId('iapellido');
+        }else{
+          requeridoPorId('inombre');
+          requeridoPorId('iapellido');
+        }
+      });
+    }
+
+    function requeridoPorId(id){
+      var i = document.getElementById(id);
+      i.setAttribute('required', '');
+
+      agregarObligatorios(i);
+    }
+
+    function noRequeridoPorId(id){
+      var i = document.getElementById(id);
+      i.removeAttribute('required');
+
+      quitarObligatorios(i);
+    }
+
+    function nombreSerie(){
+      var isisf = document.getElementById('isiseriefavorita');
+      var inosf = document.getElementById('inoseriefavorita');
+      isisf.addEventListener('change', function(){
+        if(this.select){
+          muestraPorId('nombreseriefavorita');
+          requeridoPorId('inombreseriefavorita');
+        }
+      });
+      inosf.addEventListener('change', function(){
+        if(this.select){
+          ocultarPorId('nombreseriefavorita');
+          noRequeridoPorId('inombreseriefavorita');
+        }
+      });
+    }
+
+    function muestraPorId(id){
+      var inomsf = document.getElementById(id);
+      inomsf.style.display = 'block';
+    }
+
+    function ocultarPorId(id){
+      var inomsf = document.getElementById(id);
+      inomsf.style.display = 'none';
+    }
+
+    </script>
+
+    <script type="text/javascript" src="js/barraprogreso.js"></script>
+
+
+  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>

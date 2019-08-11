@@ -1,0 +1,13 @@
+.btn-nav {
+  color: white !important;
+  font-size: 1.3em !important;
+}
+
+.btn-nav:hover {
+  background-color: red !important;
+  color: black !important;
+}
+
+.ocultar-div {
+  display: none;
+}
