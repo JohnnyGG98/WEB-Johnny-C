@@ -54,6 +54,8 @@ function agregaVal(i){
     i.onblur =  function(){
       if(this.value.length > 0){
         aumentarBarra();
+      }else{
+        disminuirBarra();
       }
     }
   }
@@ -67,5 +69,16 @@ function aumentarBarra(){
 function disminuirBarra(){
   bl-= (1/iptsr.length * 100);
   barra.style.width = bl+'%';
-  console.log('Quitamos');
+}
+
+function agregarNombreRequerido(input){
+  var agregar = true;
+  for (var i = 0; i < nameSelec.length; i++) {
+    if(nameSelec[i] == input.name){
+      agregar = false;
+    }
+  }
+  if(agregar){
+    nameSelec.push(input.name);
+  }
 }
