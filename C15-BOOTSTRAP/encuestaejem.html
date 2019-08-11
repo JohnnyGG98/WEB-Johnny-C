@@ -33,15 +33,16 @@
 
     <!--Llenar una encuesta-->
     <div class="container my-5">
+
+      <div class="progress my-3 sticky-top w-100">
+        <div id="barra-form" class="progress-bar" role="progressbar" style="width: 0%" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+
       <div class="row">
 
-        <div class="col-md-6 mx-auto">
+        <div class="col-md-8 col-lg-6 mx-auto">
 
-          <div class="progress my-3">
-            <div id="barra-form" class="progress-bar" role="progressbar" style="width: 0%" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-
-          <form class="needs-validation" novalidate action="#" method="post">
+          <form class="needs-validation" novalidate action="tablaencuestas.html" onsubmit="guardarFrm();" method="post">
 
             <div class="custom-control custom-switch">
               <input type="checkbox" class="custom-control-input" id="ianonimo" data-toggle="collapse" data-target="#datospersonales">
@@ -65,19 +66,21 @@
               </div>
             </div>
 
-            <div class="form-group">
-              <label for="itv">Seleccione cuantas horas al dia ve TV: <span class="badge badge-danger">Requerido</span> </label>
+            <!--Pregunta uno-->
+            <div class="form-group pregunta">
+              <span class="badge badge-danger">Requerido</span>
+              <label for="itv" class="pre d-block">Seleccione cuantas horas al dia ve TV: </label>
               <div id="itv">
                 <div class="custom-control custom-radio">
-                  <input type="radio" id="iunomas" class="custom-control-input" name="htv" required>
+                  <input type="radio" id="iunomas" class="custom-control-input res" value="1 a 2" name="htv" required>
                   <label class="custom-control-label" for="iunomas">1 a 2.</label>
                 </div>
                 <div class="custom-control custom-radio">
-                  <input type="radio" id="idosmas" class="custom-control-input" name="htv" required>
+                  <input type="radio" id="idosmas" class="custom-control-input res" value="2 a 4" name="htv" required>
                   <label class="custom-control-label" for="idosmas">3 a 4.</label>
                 </div>
                 <div class="custom-control custom-radio">
-                  <input type="radio" id="icuatromas" class="custom-control-input" name="htv" required>
+                  <input type="radio" id="icuatromas" class="custom-control-input res" value="4 a mas" name="htv" required>
                   <label class="custom-control-label" for="icuatromas">4 a mas.</label>
                   <div class="invalid-feedback">
                     Debe seleccionar una opcion
@@ -86,22 +89,51 @@
               </div>
             </div>
 
-            <div class="form-group">
-              <label for="">Seleccione uno o mas series que ha visto: <span class="badge badge-danger">Requerido</span></label>
+            <!--/Pregunta uno-->
+
+            <!--Pregunta dos-->
+            <div class="form-group pregunta">
+              <label for="itv" class="pre">Que tipo de series ve:</label>
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" id="icomedia" class="custom-control-input res" value="Comedia" name="ts">
+                  <label class="custom-control-label" for="icomedia">Comedia</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" id="ificcion" class="custom-control-input res" value="Ficcion" name="ts">
+                  <label class="custom-control-label" for="ificcion">Ficcion</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" id="iterror" class="custom-control-input res" value="Terror" name="ts">
+                  <label class="custom-control-label" for="iterror">Terror</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" id="idrama" class="custom-control-input res" value="drama" name="ts">
+                  <label class="custom-control-label" for="idrama">Drama</label>
+                </div>
+
+            </div>
+            <!--/Pregunta dos-->
+
+            <!--Pregunta tres-->
+            <div class="form-group pregunta">
+              <span class="badge badge-danger">Requerido</span>
+              <label class="pre d-block">Seleccione uno o mas series que ha visto:</label>
+
               <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="iserieuno" name="iserie">
+                <input type="checkbox" class="custom-control-input res" value="Lost" id="iserieuno" name="iserie">
                 <label class="custom-control-label" for="iserieuno">Lost</label>
               </div>
               <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="iseriedos" name="iserie">
-                <label class="custom-control-label" for="iseriedos">The hundred</label>
+                <input type="checkbox" class="custom-control-input res" value="The Hundred" id="iseriedos" name="iserie">
+                <label class="custom-control-label" for="iseriedos">The Hundred</label>
               </div>
               <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="iserietres" name="iserie">
+                <input type="checkbox" class="custom-control-input res" value="Mr. Robot" id="iserietres" name="iserie">
                 <label class="custom-control-label" for="iserietres">Mr. Robot</label>
               </div>
               <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="isericuatro" name="iserie">
+                <input type="checkbox" class="custom-control-input res" value="How I met your mother" id="isericuatro" name="iserie">
                 <label class="custom-control-label" for="isericuatro">How I met your mother</label>
               </div>
               <div class="invalid-feedback">
@@ -109,40 +141,80 @@
               </div>
 
             </div>
+            <!--/Pregunta tres-->
 
-            <div class="form-group">
-              <label for="itv">Tiene una serie favorita: <span class="badge badge-danger">Requerido</span></label>
+            <!--Pregunta cuatro-->
+            <div class="form-group pregunta">
+              <span class="badge badge-danger">Requerido</span>
+              <label class="pre b-block">Tiene una serie favorita: </label>
               <div class="custom-control custom-radio">
-                <input type="radio" id="isiseriefavorita" class="custom-control-input" name="sf" required>
+                <input type="radio" id="isiseriefavorita" class="custom-control-input res" value="Si" name="sf" required>
                 <label class="custom-control-label" for="isiseriefavorita">Si</label>
               </div>
               <div class="custom-control custom-radio">
-                <input type="radio" id="inoseriefavorita" class="custom-control-input" name="sf" required>
+                <input type="radio" id="inoseriefavorita" class="custom-control-input res" value="No" name="sf" required>
                 <label class="custom-control-label" for="inoseriefavorita">No</label>
                 <div class="invalid-feedback">
                   Debe seleccionar una opcion
                 </div>
               </div>
             </div>
+            <!--/Pregunta cuatro-->
 
-            <div id="nombreseriefavorita" class="form-group ocultar-div">
-              <label for="txtSerieFavorita">Serie favorita:</label>
-              <input type="text" id="inombreseriefavorita" class="form-control" name="txtSerieFavorita" placeholder="Ingrese el nombre de su serie favorita">
+            <!--Pregunta cinco-->
+            <div id="nombreseriefavorita" class="form-group ocultar-div pregunta">
+              <label class="pre d-block">Serie favorita:</label>
+              <input type="text" id="inombreseriefavorita" class="form-control res" name="txtSerieFavorita" placeholder="Ingrese el nombre de su serie favorita">
               <div class="invalid-feedback">
                 Debe escriber el nombre de su serie favorita
               </div>
             </div>
+            <!--/Pregunta cinco-->
 
-            <div class="form-group">
-              <label for="icalificacion">Califique la serie: The Bing Bang Theory  <span class="badge badge-danger">Requerido</span> </label>
-              <input type="range" class="custom-range" id="icalificacion" max="10" min="0" value="0" required>
+            <!--Pregunta seis-->
+            <div class="form-group pregunta">
+              <span class="badge badge-danger">Requerido</span>
+              <label class="pre d-block">Califique la serie: The Bing Bang Theory </label>
+              <div class="range-field">
+                <input type="range" class="custom-range res" id="icalificacion" max="10" min="0" value="0" required>
+              </div>
               <small class="form-text text-muted">Su calificacion es: <span id="tcalificacion" class="badge badge-primary"></span> </small>
               <div class="invalid-feedback" id="ecalificacion">
                 Debe escoger una calificacion mayor a 0
               </div>
             </div>
+            <!--/Pregunta seis-->
 
-            <button class="btn btn-primary" type="submit" onclick="validar()">Enviar Formulario</button>
+            <!--Pregunta siete-->
+            <div class="form-group pregunta">
+              <label for="txtComentarioTBT" class="pre d-block">Ingrese un cometario sobre The Big Bang Theory:</label>
+              <input type="text" id="icomentariotbt" class="form-control res" name="txtComentarioTBT" placeholder="Ingrese un comentario sobre la serie">
+            </div>
+            <!--/Pregunta siete-->
+
+            <!--Pregunta ocho-->
+            <div class="form-group pregunta">
+              <label class="pre">Seleccione cuantos servicios de stream tiene:
+                <small class="form-text text-muted">Servicios como: Netflix, Hulu, Amazon Prime Video</small>
+              </label>
+
+              <div class="custom-control custom-radio">
+                <input type="radio" id="iunost" class="custom-control-input res" name="sst">
+                <label class="custom-control-label" for="iunost">1</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="idosst" class="custom-control-input res" name="sst">
+                <label class="custom-control-label" for="idosst">2</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="itresst" class="custom-control-input res" name="sst">
+                <label class="custom-control-label" for="itresst">3</label>
+              </div>
+
+            </div>
+            <!--/Pregunta ocho-->
+
+            <button class="btn btn-primary" type="submit">Enviar Formulario</button>
 
           </form>
         </div>
@@ -154,6 +226,8 @@
     <script type="text/javascript" src="js/validaciones.js"></script>
 
     <script type="text/javascript" src="js/barraprogreso.js"></script>
+
+    <script type="text/javascript" src="js/guardarejem.js"></script>
 
   </body>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

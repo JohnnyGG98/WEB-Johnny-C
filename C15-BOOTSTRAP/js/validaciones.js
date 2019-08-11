@@ -21,14 +21,17 @@
 })();
 
 function validar(){
-    validarCbx();
+  let valido = true;
+  valido = validarCbx();
     var ir = document.getElementById('icalificacion');
     var ec = document.getElementById('ecalificacion');
     if(ir.value > 0){
       ec.style.display = 'none';
     }else{
       ec.style.display = 'block';
+      valido = false;
     }
+  return valido;
 }
 
 function validarCbx(){
@@ -41,14 +44,19 @@ function validarCbx(){
       }
     }
   }
+
   if(nums === 0){
     for (var i = 0; i < cbxs.length; i++) {
       cbxs[i].setAttribute('required', '');
     }
+    //No selecciono ninguno
+    return false;
   }else{
     for (var i = 0; i < cbxs.length; i++) {
       cbxs[i].removeAttribute('required');
     }
+    //Todo esta correcto
+    return true;
   }
 }
 
@@ -112,11 +120,7 @@ function eventoInputRange(){
   var ir = document.getElementById('icalificacion');
   var tc = document.getElementById('tcalificacion');
   var ec = document.getElementById('ecalificacion');
-  ir.addEventListener('change', function(){
-    console.log('Valor: '+this.value);
-  });
   ir.addEventListener('input', function(){
-    console.log('Valor: '+this.value);
     if(this.value > 0){
       tc.innerHTML = this.value;
       ec.style.display = 'none';

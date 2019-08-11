@@ -9,6 +9,16 @@ function obtenerInputsForm(){
     if(is[i].getAttribute('required') != null){
       agregarObligatorios(is[i]);
       agregaVal(is[i]);
+    }else{
+      if(is[i].type == 'checkbox'){
+        is[i].addEventListener('change', function(){
+          if(this.checked){
+            console.log('Seleccionado');
+          }else{
+            console.log('Deseleccionado');
+          }
+        });
+      }
     }
   }
 }
@@ -41,7 +51,7 @@ function quitarObligatorios(input){
 }
 
 function agregaVal(i){
-  if(i.type == 'checkbox' || i.type == 'radio'){
+  if(i.type == 'radio'){
     i.addEventListener('change', function(){
       if(i.checked){
         aumentarBarra();
@@ -58,7 +68,16 @@ function agregaVal(i){
         disminuirBarra();
       }
     }
+  }else if(i.type == 'range'){
+    i.addEventListener('change', function(){
+      if(this.value > 0){
+        aumentarBarra();
+      }else{
+        disminuirBarra();
+      }
+    });
   }
+
 }
 
 function aumentarBarra(){
