@@ -25,6 +25,9 @@
           <li class="nav-item">
             <a class="nav-link" href="encuestaejem.html">Ejemplo Encuesta</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tablaencuestas.html">Tabla Encuestas Ejemplo</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -146,7 +149,7 @@
             <!--Pregunta cuatro-->
             <div class="form-group pregunta">
               <span class="badge badge-danger">Requerido</span>
-              <label class="pre b-block">Tiene una serie favorita: </label>
+              <label class="pre d-block">Tiene una serie favorita: </label>
               <div class="custom-control custom-radio">
                 <input type="radio" id="isiseriefavorita" class="custom-control-input res" value="Si" name="sf" required>
                 <label class="custom-control-label" for="isiseriefavorita">Si</label>
@@ -199,20 +202,27 @@
               </label>
 
               <div class="custom-control custom-radio">
-                <input type="radio" id="iunost" class="custom-control-input res" name="sst">
+                <input type="radio" id="iunost" class="custom-control-input res" value="1" name="sst">
                 <label class="custom-control-label" for="iunost">1</label>
               </div>
               <div class="custom-control custom-radio">
-                <input type="radio" id="idosst" class="custom-control-input res" name="sst">
+                <input type="radio" id="idosst" class="custom-control-input res" value="2" name="sst">
                 <label class="custom-control-label" for="idosst">2</label>
               </div>
               <div class="custom-control custom-radio">
-                <input type="radio" id="itresst" class="custom-control-input res" name="sst">
+                <input type="radio" id="itresst" class="custom-control-input res" value="3" name="sst">
                 <label class="custom-control-label" for="itresst">3</label>
               </div>
 
             </div>
             <!--/Pregunta ocho-->
+
+            <!--Pregunta nueve-->
+            <div class="form-group pregunta">
+              <label for="txtaf" class="pre d-block">Nombre de su actor/actriz favorito/a:</label>
+              <input type="text" id="iaf" class="form-control res" name="txtaf" placeholder="Ingrese el nombre de sus actor/actriz favorito/a" required>
+            </div>
+            <!--/Pregunta nueve-->
 
             <button class="btn btn-primary" type="submit">Enviar Formulario</button>
 
