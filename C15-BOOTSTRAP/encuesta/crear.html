@@ -19,10 +19,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav" style="font-size: 1.4em;">
           <li class="nav-item">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Formulario</a>
+            <a class="nav-link" href="../encuestaejem.html">Ejemplo Encuesta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../tablaencuestas.html">Tabla Encuestas Ejemplo</a>
           </li>
         </ul>
       </div>
@@ -30,9 +33,40 @@
 
     <!--/Barra de navegacion-->
 
-    <!--Formulario crear una encuesta-->
+    <!--Formulario-->
 
-    <!--Formulario crear una encuesta-->
+    <div class="container my-5">
+      <div id="alt" class="my-2 mx-5">
+
+      </div>
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+
+          <div id="crear-encuesta">
+
+            <div class="form-group">
+              <span class="badge badge-danger">Requerido</span>
+              <label for="txtnomencuesta" class="pre d-block">Nombre de la encuesta:</label>
+              <input type="text" id="txt" class="form-control" name="txtnomencuesta" placeholder="Ingrese el nombre de la encuesta." required>
+              <div class="invalid-feedback">
+                Debe ingresar el nombre de la encuesta.
+              </div>
+            </div>
+
+          </div>
+          <div class="my=2">
+            <button class="btn btn-primary" type="button" id="btn" onclick="guardar()">Guardar Encuesta</button>
+            <button class="btn btn-danger" type="button" id="btncancelar">Cancelar</button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!--/Formulario-->
+    <script type="text/javascript" src="js/validacion.js"></script>
+    <script type="text/javascript" src="js/guardar.js"></script>
 
 
   </body>
