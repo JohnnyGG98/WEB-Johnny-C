@@ -6,6 +6,10 @@ var btn = document.getElementById('btn');
 //Obtenemos el div en donde ingresaremos los mensajes
 var alt = document.getElementById('alt');
 
+//Aqui guardaremos las encuestas
+var encuestas = [];
+var preguntas = [];
+
 var encuesta;
 var pregunta;
 var respuestas = [];
@@ -22,8 +26,6 @@ function guardar(){
   }else{
     mostrarError('Debe ingresar el nombre de la encuesta!');
   }
-
-  console.log('Esta es la encuesta: '+encuesta);
 }
 
 function guardarPregunta() {
@@ -48,7 +50,7 @@ function guardarPregunta() {
       pregunta: txt,
       tipo: tipo
     }
-    console.log('Pregunta: '+pregunta);
+    
     frm.innerHTML = getFrmRespuesta(pregunta.pregunta);
     //Agregamos las respuestas
     agregarRespuestas();
@@ -90,12 +92,6 @@ function guardarRespuesta() {
         valor: ''
       }
       break;
-    case 'Opcion multiple':
-
-      break;
-    case 'Opcion simple':
-
-      break;
     case 'Rango':
       respuesta = {
         valorminimo: getValorPorId('min'),
@@ -103,16 +99,48 @@ function guardarRespuesta() {
       }
       break;
     default:
-
+      var res = document.getElementsByClassName('res');
+      respuesta = [];
+      for (var i = 0; i < res.length; i++) {
+        if(res[i].value != ''){
+            respuesta.push(res[i].value);
+            console.log('Respuesta: '+res[i].value);
+        }
+      }
       break;
   }
 
-  console.log('Esta es la respuesta: ' + respuesta);
+  respuestas.push(respuesta);
+
+  //Aqui guardamos la encuesta
+  var pre = {
+    pregunta: pregunta,
+    respuestas: respuestas
+  }
+  //Guardamos las preguntas
+  preguntas.push(pre);
+  mostrarMensaje('Guardamos correctamente respuestas de: <stronge> '
+  + pregunta.pregunta + '</stronge>');
+  //Receteamos
   pregunta = null;
   frm.innerHTML = getFrmPregunta();
   btn.onclick = guardarPregunta;
   btn.innerHTML = 'Agregar pregunta a ' + encuesta;
-  console.log('Guardamos la respuesta...');
+}
+
+//Guardamos la encuesta
+function guardarEncuesta(){
+  var ec = {
+    encuesta: encuesta,
+    preguntas: preguntas
+  }
+  encuestas.push(ec);
+
+  mostrarMensaje('Guardamos correctamente la encuesta '+encuesta);
+  frm.innerHTML = getFrmEncuesta();
+  btn.onclick = guardar;
+  btn.innerHTML = 'Guardar Encuesta';
+  encuesta = null;
 }
 
 function getValor(){
@@ -175,22 +203,23 @@ function getInputOpt(){
 
 //Formulario de la respuesta
 function getFrmRespuesta(pregunta){
-  var head = `
+  var html = `
   <div class="badge badge-dark w-100 my-3 text-white text-center ">
     <h3 class=" my-2  text-wrap">
       ` + pregunta + `
     </h3>
   </div>
-  `;
-  return head + `
   <div class="my-2" id="respuestas">
   </div>
   `;
+
+  return html;
 }
 
 //El formulario de pregunta
 function getFrmPregunta() {
-  return `
+
+  html = `
   <div class="form-group">
     <span class="badge badge-danger">Requerido</span>
     <label for="txtnomencuesta" class="pre d-block">Nombre de la pregunta:</label>
@@ -209,6 +238,29 @@ function getFrmPregunta() {
       <option>Opcion simple</option>
       <option>Rango</option>
     </select>
+  </div>
+  `;
+
+  if(preguntas.length >= 2){
+    html += `
+    <div class="my-2 mx-5">
+      <button class="btn btn-success btn-block" onclick="guardarEncuesta()"> Terminar encuesta </button>
+    </div>
+    `;
+  }
+
+  return html;
+}
+
+function getFrmEncuesta(){
+  return `
+  <div class="form-group">
+    <span class="badge badge-danger">Requerido</span>
+    <label for="txtnomencuesta" class="pre d-block">Nombre de la encuesta:</label>
+    <input type="text" id="txt" class="form-control" name="txtnomencuesta" placeholder="Ingrese el nombre de la encuesta." required>
+    <div class="invalid-feedback">
+      Debe ingresar el nombre de la encuesta.
+    </div>
   </div>
   `;
 }
@@ -231,7 +283,7 @@ function mostrarError(error){
 //Mensaje de informacion al guardar
 function mostrarMensaje(msg){
   html =  `
-  <div class="alert alert-info alert-dismissible fade show" role="alert">
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
   `
   + msg +
   `
