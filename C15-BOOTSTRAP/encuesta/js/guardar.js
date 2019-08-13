@@ -1,4 +1,3 @@
-console.log('Cargamos la pagina');
 //Obtenemos el formulario
 var frm = document.getElementById('crear-encuesta');
 //Obtenemos el boton
@@ -9,6 +8,17 @@ var alt = document.getElementById('alt');
 //Aqui guardaremos las encuestas
 var encuestas = [];
 var preguntas = [];
+
+//Vemos si ya tenemos valores
+var ectr = localStorage.getItem("crearencuestas");
+
+if(ectr != null){
+  encuestas = JSON.parse(ectr);
+}
+//Si tenemos encuestas ya mostramos el icono
+if(encuestas.length >= 1){
+  mostrarPorId('btnverencuestas');
+}
 
 var encuesta;
 var pregunta;
@@ -50,8 +60,8 @@ function guardarPregunta() {
       pregunta: txt,
       tipo: tipo
     }
-    
-    frm.innerHTML = getFrmRespuesta(pregunta.pregunta);
+
+    frm.innerHTML = getFrmRespuesta(pregunta.pregunta, pregunta.tipo );
     //Agregamos las respuestas
     agregarRespuestas();
 
@@ -99,7 +109,7 @@ function guardarRespuesta() {
       }
       break;
     default:
-      var res = document.getElementsByClassName('res');
+      var res = frm.getElementsByClassName('res');
       respuesta = [];
       for (var i = 0; i < res.length; i++) {
         if(res[i].value != ''){
@@ -141,6 +151,10 @@ function guardarEncuesta(){
   btn.onclick = guardar;
   btn.innerHTML = 'Guardar Encuesta';
   encuesta = null;
+  preguntas = [];
+  ocultarPorId('btnfin');
+  //Guardamos  en memoria
+  localStorage.setItem("crearencuestas", JSON.stringify(encuestas));
 }
 
 function getValor(){
@@ -149,6 +163,16 @@ function getValor(){
 
 function getValorPorId(id){
   return document.getElementById(id).value;
+}
+
+function ocultarPorId(id){
+  var d = document.getElementById(id);
+  d.style.display = 'none';
+}
+
+function mostrarPorId(id){
+  var d = document.getElementById(id);
+  d.style.display = 'block';
 }
 
 //Formulario para opciones
@@ -202,12 +226,20 @@ function getInputOpt(){
 }
 
 //Formulario de la respuesta
-function getFrmRespuesta(pregunta){
+function getFrmRespuesta(pregunta, tipo){
   var html = `
   <div class="badge badge-dark w-100 my-3 text-white text-center ">
     <h3 class=" my-2  text-wrap">
       ` + pregunta + `
     </h3>
+  </div>
+  <div class="mx-auto border-bottom">
+    <h5>
+    Tipo de respuesta:
+    </h5>
+    <h4 class="p-2 text-center">
+      ` + tipo + `
+    </h4>
   </div>
   <div class="my-2" id="respuestas">
   </div>
@@ -241,18 +273,19 @@ function getFrmPregunta() {
   </div>
   `;
 
-  if(preguntas.length >= 2){
-    html += `
-    <div class="my-2 mx-5">
-      <button class="btn btn-success btn-block" onclick="guardarEncuesta()"> Terminar encuesta </button>
-    </div>
-    `;
+  if(preguntas.length > 2){
+    mostrarPorId('btnfin');
   }
 
   return html;
 }
 
 function getFrmEncuesta(){
+
+  if(encuestas.length >= 1){
+    mostrarPorId('btnverencuestas');
+  }
+
   return `
   <div class="form-group">
     <span class="badge badge-danger">Requerido</span>

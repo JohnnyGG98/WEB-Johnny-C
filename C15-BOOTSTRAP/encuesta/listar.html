@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <!--Barra de navegacion-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+      <a class="navbar-brand" href="#" style="font-size: 1.7em;">TFORM</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav" style="font-size: 1.4em;">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../encuestaejem.html">Ejemplo Encuesta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../tablaencuestas.html">Tabla Encuestas Ejemplo</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--/Barra de navegacion-->
+
+    <!--Formulario-->
+
+    <div class="container my-5">
+
+      <div class="row">
+
+        <div class="alert alert-info mx-auto" id="sinencuestas" style="display:none;">
+          <h4 class="alert-heading">No tenemos encuestas que mostrar!</h4>
+          <p>Aun no crea ninguna encuesta, puede crear su encuesta
+            <a href="crear.html" class="alert-link">aqui</a>.
+          </p>
+        </div>
+
+        <div class="col-md-8 mx-auto">
+          <div class="" id="verencuesta">
+
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+    <!--/Formulario-->
+    <script type="text/javascript" src="js/cargarencuesta.js"></script>
+    <script type="text/javascript">
+      //Cargamos las encuestas
+      var encuestas = [];
+      //Vemos si ya tenemos valores
+      var ectr = localStorage.getItem("crearencuestas");
+
+      if(ectr != null){
+        encuestas = JSON.parse(ectr);
+      }
+      //Si tenemos encuestas ya mostramos el icono
+      if(encuestas.length == 0){
+        var d = document.getElementById('sinencuestas');
+        d.style.display = 'block';
+      }
+      //Mostramos las encuestas
+      verEncuesta();
+    </script>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>

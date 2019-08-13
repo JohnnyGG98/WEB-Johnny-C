@@ -59,7 +59,7 @@ Usar el collapse
 
         <div class="col-md-5 mx-auto">
           <div class="m-3">
-            <a href="#"
+            <a href="encuesta/listar.html"
             class="btn btn-primary btn-block">
               Ver Encuestas
             </a>
@@ -68,20 +68,20 @@ Usar el collapse
 
       </div>
 
-      <div class="my-3">
+      <div class="my-3 mx-auto border-bottom">
         <h2 class="text-center">Elija la encuesta que quiere llenar</h2>
-        <div class="row">
-        </div>
       </div>
 
       <div class="row">
 
-        <div class="col-md-6 mx-auto">
+        <div class="alert alert-info mx-auto" id="sinencuestas" style="display:none;">
+          <h4 class="alert-heading">No tenemos encuestas que mostrar!</h4>
+          <p>Aun no crea ninguna encuesta, puede crear su encuesta
+            <a href="encuesta/crear.html" class="alert-link">aqui</a>.
+          </p>
+        </div>
 
-          <a href="#"
-          class="btn btn-primary btn-lg btn-block">
-            Perros
-          </a>
+        <div class="col-md-6 mx-auto" id="rowbtns">
 
         </div>
 
@@ -89,6 +89,42 @@ Usar el collapse
 
     </div>
     <!--Informacion-->
+
+    <script type="text/javascript">
+      //Cargamos las encuestas
+      var encuestas = [];
+      //Vemos si ya tenemos valores
+      var ectr = localStorage.getItem("crearencuestas");
+
+      if(ectr != null){
+        encuestas = JSON.parse(ectr);
+      }
+      //Aqui agregaremos los botones
+      var rbtn = document.getElementById('rowbtns');
+      //Si tenemos encuestas ya mostramos el icono
+      if(encuestas.length > 0){
+
+        for (var i = 0; i < encuestas.length; i++) {
+          console.log('------------');
+          console.log(encuestas[i]);
+          rbtn.innerHTML += getBtnLink(encuestas[i].encuesta);
+        }
+      }else{
+        var d = document.getElementById('sinencuestas');
+        d.style.display = 'block';
+      }
+      //Obtenemos el btn que pondremos
+
+      function getBtnLink(encuesta){
+        return `
+        <a href="encuesta/llenar.html?nombre=` + encuesta + `"
+        class="btn btn-primary btn-lg btn-block">
+          ` + encuesta + `
+        </a>
+        `;
+      }
+
+    </script>
 
 
   </body>

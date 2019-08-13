@@ -4,6 +4,7 @@ var rowencuesta = document.getElementById('verencuesta');
 
 function verEncuesta() {
   console.log('Veremos una encuesta');
+  rowencuesta.innerHTML = '';
   var pos = 100;
   for (var i = 0; i < encuestas.length; i++) {
     console.log('------------');
@@ -69,19 +70,26 @@ function getSiNo(name, i) {
   <div class="custom-control custom-radio">
     <input type="radio" class="custom-control-input res" value="Si" name="`+name+`"
     id="` + i + name + `" required>
-    <label class="custom-control-label" for="` + i + name + i + `">Si</label>
+    <label class="custom-control-label" for="` + i + name + `">Si</label>
   </div>
   <div class="custom-control custom-radio">
     <input type="radio" class="custom-control-input res" value="No" name="`+name+`"
     id="` + name + i + `" required>
     <label class="custom-control-label" for="` + name + i + `">No</label>
+    <div class="invalid-feedback">
+      Debe seleccionar una de las opciones
+    </div>
   </div>
   `;
 }
 
 function getLibre() {
   return `
-  <input type="text" class="form-control res" placeholder="Ingrese una respuesta libre">
+  <input type="text" class="form-control res"
+  placeholder="Ingrese una respuesta libre" required>
+  <div class="invalid-feedback">
+    Debe ingresar su respuesta es una pregunta obligatoria.
+  </div>
   `;
 }
 
@@ -127,6 +135,9 @@ function getInputCheckbox(res, name, id){
     <input type="checkbox" class="custom-control-input res" value="` + res + `"
     name="` + name + `" id="` + id + `">
     <label class="custom-control-label" for="` + id + `">` + res + `</label>
+    <div class="invalid-feedback">
+      Debe escoger por lo menos una de las opciones
+    </div>
   </div>
   `;
 }
