@@ -1,0 +1,18 @@
+.bg-pri {
+  background-color: #2d3436 !important;
+}
+
+.bg-sec {
+  background-color: #636e72 !important;
+}
+
+.txt-g {
+  color: #ccc;
+}
+
+.img-size {
+  height: 250px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
