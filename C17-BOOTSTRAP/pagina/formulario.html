@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home | LIST</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+
+    <!--Header page-->
+    <div class="bg-red">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <h1 class="txt-big text-white px-4 py-3 mb-0">A VG</h1>
+        </div>
+      </div>
+    </div>
+    <!--/Header page-->
+
+    <!--Navegacion-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-pink">
+    <a class="navbar-brand text-white txt-med" href="home.html">My List</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item active">
+          <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link" href="anime.html">Animes</a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link" href="videojuego.html">Videojuegos</a>
+        </li>
+
+
+
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Busqueda" aria-label="Buscar">
+        <button class="btn btn-dark text-white my-2 my-sm-0" type="submit">Buscar</button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="container my-4">
+    <div class="row">
+      <div class="col">
+        <h3>Formularios y listas</h3>
+
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link" href="#A" data-toggle="tab">Anime</a>
+            </li>
+            <li class="nav-item">
+              <a  class="nav-link" href="#B" data-toggle="tab">Videojuego</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="A">
+          <div class="row mt-4">
+
+            <div class="col-md-4">
+              <form class="form-horizontal">
+                <div class="form-group">
+                  <label for="" class="control-label">Anime:</label>
+                  <input class="form-control" placeholder="Nombre del anime" type="text" name="" value="">
+                </div>
+
+                <div class="form-group">
+                  <label for="" class="control-label">Calificacion:</label>
+                  <input class="form-control" placeholder="Calificacion que le pone al anime, no existe un limite." type="number" name="" value="">
+                </div>
+
+                <button class="btn btn-pink btn-block mb-3" type="button" name="button">Guardar Anime</button>
+
+              </form>
+            </div>
+
+            <div class="col-md-8">
+
+              <table class="table table-striped">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Calificacion</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Boku no Hero</td>
+                    <td>1290</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Kimetsu No Yaiba | Demon Slayer</td>
+                    <td>1143</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Gatsu no lion</td>
+                    <td>875</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Shingeki No Kyojin</td>
+                    <td>1352</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>One Piece</td>
+                    <td>1289</td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+            </div>
+
+          </div>
+        </div>
+        <div class="tab-pane fade" id="B">
+          <div class="row mt-4">
+            <div class="col-md-4">
+
+              <form class="form-horizontal" action="#">
+                <div class="form-group">
+                  <label for="" class="label-control">Videojuego:</label>
+                  <input class="form-control" placeholder="Nombre de un videojuego" type="text" name="" value="">
+                </div>
+                <div class="form-group">
+                  <label for="" class="label-control">Comentario:</label>
+                  <textarea name="name" class="form-control" placeholder="Ingrese un comentario sobre el juego" rows="4" cols="10"></textarea>
+                </div>
+
+                <button type="button" class="btn btn-pink btn-block mb-3" name="button">Guardar videojuego</button>
+              </form>
+
+            </div>
+
+            <div class="col-md-8">
+
+              <table class="table table-striped">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Comentario</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>The Witcher 3</td>
+                    <td>Gran historia, con gran jugabilidad, es importante jugarlo en dificil para una mejor experiencia contra los bosses. </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Left For Dead 2</td>
+                    <td>Un gran juego para jugar con amigos, divertido y con una gran variedad de mods para adaptarlo a como te gusta.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Injustice</td>
+                    <td>Gran historia, no es un juego de peleas muy complicado. Es muy divertido de jugar.</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+
+        </div>
+
+    </div>
+  </div>
+
+  <div class="bg-obsidian mb-0">
+    <h3 class="text-white text-center py-4 mb-0">Agrege sus animes y videojuegos favoritos a su lista.</h3>
+  </div>
+
+
+  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,31 @@
+.altura-sm {
+  height: 10% !important;
+}
+
+.altura-md {
+  height: 25% !important;
+}
+
+.altura-lg {
+  height: 40% !important;
+}
+
+.bg-blue {
+  background-color: #546de5;
+}
+
+.bg-green {
+  background-color: #32ff7e;
+}
+
+.bg-salmon {
+  background-color: #f19066;
+}
+
+.bg-red {
+  background-color: #e66767;
+}
+
+.bg-pink {
+  background-color: #cf6a87;
+}
