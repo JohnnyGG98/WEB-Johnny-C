@@ -1,0 +1,218 @@
+h1 h2 h3 h4 h5 h6 {
+  margin-bottom: 0;
+}
+
+.btn-img {
+  float: right;
+  margin-right: 2%;
+}
+
+.mi-btn {
+  font-size: 1.2em;
+}
+
+.mi-icon-btn {
+  display: inline-block;
+}
+
+.img-producto {
+  width: 320px;
+  height: 230px;
+  display: block;
+  margin: auto;
+
+}
+
+.head-producto {
+  position: relative;
+  cursor: pointer;
+  width: 320px;
+  height: 230px;
+}
+
+.precio_producto {
+  position: absolute;
+  padding: 3% 3% 5% 3%;
+  right: 20px;
+  text-align: center;
+  border-bottom: 1px solid;
+  border-radius: 0 0 10px 10px;
+  visibility: hidden;
+  background-color: #33d9b2;
+}
+
+.head-producto:hover > .precio_producto {
+  visibility: visible;
+}
+
+.head-producto:hover > .acciones-principal {
+  visibility: visible;
+}
+
+.foot-producto {
+  background-color: #f1f2f6;
+  color: black;
+  padding: 5% 5% 0 5%;
+  width: 320px;
+}
+
+.btn-agregar {
+  float: right;
+  border: 1px solid #ced4da;
+}
+
+.btn-agregar:hover {
+  border: none;
+}
+
+.btn-carro:hover {
+  background-color: #33d9b2;
+}
+
+.btn-lista:hover {
+  background-color: #34ace0;
+}
+
+
+.acciones-principal {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+}
+
+
+/*INFORMACION DEL PRODUCTO*/
+
+.info-producto {
+  border-top: solid 5px #33d9b2;
+  padding-top: 10px;
+}
+
+.info-foot {
+  display: relative;
+}
+
+.info-categorias {
+  margin-top: 2%;
+}
+
+.info-categorias a {
+  text-decoration: none;
+  padding: 2px 5px;
+  border: 1px solid #808e9b;
+  border-radius: 3px;
+  color: #808e9b;
+}
+
+.info-categorias a:hover {
+  color: white;
+  background-color: #808e9b;
+}
+
+/* /INFORMACION DEL PRODUCTO*/
+
+/* ACCIONES AL VER UN PRODUCTO */
+.accion-producto {
+  border-bottom: 5px solid #33d9b2;
+  position: relative;
+  background-color: #f1f2f6;
+  width: 320px;
+}
+
+
+.btn-agregar-carro {
+  background-color: #33d9b2;
+  color: white;
+  width: 100%;
+}
+
+.btn-agregar-carro:hover {
+  background-color: #218c74;
+  color: white;
+}
+
+.btn-agregar-lista {
+  background-color: #34ace0;
+  color: white;
+  width: 100%;
+}
+
+.btn-agregar-lista:hover {
+  background-color: #227093;
+  color: white;
+}
+
+/* / ACCIONES AL VER UN PRODUCTO */
+
+/*Calificacion producto */
+.form-calificacion {
+  width: 250px;
+  margin: 0.5% auto;
+  height: 50px;
+}
+
+.form-calificacion p {
+  text-align: left;
+}
+
+.form-calificacion label {
+  font-size: 40px;
+}
+
+.info-precio {
+  display: inline-block;
+}
+
+.calificacion-general {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  cursor: pointer;
+}
+
+.calificacion-total {
+  font-size: 40px;
+}
+
+.calificacion-general label {
+  color: #808e9b;
+  cursor: pointer;
+}
+
+.calificacion-total {
+  font-size: 25px;
+}
+
+.calificacion-general input[type = "radio"] {
+  display: none;
+  cursor: pointer;
+}
+
+.calificacion-general label:hover:not("disabled") {
+  color: #ffc048;
+}
+
+.calificacion-general label:hover ~ label {
+  color: #ffc048;
+}
+
+.calificacion-general input[type = "radio"]:checked ~ label {
+  color: #ffc048;
+}
+/* /Calificacion producto */
+
+
+/* Precio del producto */
+
+.precio-general {
+  border-left: solid 6px #33d9b2;
+  padding: 3px 6px;
+}
+
+/* Agregar al carro */
+.num-producto {
+  padding: 0.375rem 0.75rem;
+}
+
+.img-icon {
+  height: calc(0.6em + 0.75rem + 1px);
+}
