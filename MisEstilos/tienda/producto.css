@@ -20,7 +20,6 @@ h1 h2 h3 h4 h5 h6 {
   height: 230px;
   display: block;
   margin: auto;
-
 }
 
 .head-producto {
@@ -30,20 +29,6 @@ h1 h2 h3 h4 h5 h6 {
   height: 230px;
 }
 
-.precio_producto {
-  position: absolute;
-  padding: 3% 3% 5% 3%;
-  right: 20px;
-  text-align: center;
-  border-bottom: 1px solid;
-  border-radius: 0 0 10px 10px;
-  visibility: hidden;
-  background-color: #33d9b2;
-}
-
-.head-producto:hover > .precio_producto {
-  visibility: visible;
-}
 
 .head-producto:hover > .acciones-principal {
   visibility: visible;
@@ -73,13 +58,11 @@ h1 h2 h3 h4 h5 h6 {
   background-color: #34ace0;
 }
 
-
 .acciones-principal {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.2);
   visibility: hidden;
 }
-
 
 /*INFORMACION DEL PRODUCTO*/
 
