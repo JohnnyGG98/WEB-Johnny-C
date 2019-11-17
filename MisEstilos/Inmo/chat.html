@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CHAT BOT</title>
+    <link rel="stylesheet" href="chat.css">
+  </head>
+  <body>
+
+
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <hr>
+    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h2>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
+
+  <div id="chat" class="fijo-derecha">
+    <div id="chat-header">
+      Grupo FLL
+    </div>
+
+    <div id="mensajes" class="scroll">
+
+      <div class="mensaje-bot mensaje">
+          <img src="https://avatars0.githubusercontent.com/u/42211711?s=460&v=4" alt="" class="foto">
+          <div class="flecha-izquierda"></div>
+          <div class="contenido">
+              Buenas tardes en que le podemos ayudar?
+          </div>
+      </div>
+
+      <div class="mensaje-cliente mensaje">
+          <div class="contenido">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+          </div>
+          <div class="flecha-derecha"></div>
+          <img src="https://avatars0.githubusercontent.com/u/42211711?s=460&v=4" alt="" class="foto">
+      </div>
+
+    </div>
+
+    <div id="caja-mensaje">
+      <input type="text" placeholder="Escribir mensaje..." id="txt-mensaje">
+      <button>Enviar</button>
+    </div>
+
+  </div>
+
+
+  <script type="text/javascript">
+
+  const HEADCHAT = document.querySelector('#chat-header');
+  const MENSAJES = document.querySelector('#mensajes');
+  const CAJAMENSAJE = document.querySelector('#caja-mensaje');
+  const TXTMENSAJE = document.querySelector('#txt-mensaje');
+
+  var mostrar = true;
+
+  HEADCHAT.addEventListener('click', function() {
+    if (mostrar) {
+      CAJAMENSAJE.style.display = 'none';
+      MENSAJES.style.display = 'none';
+      mostrar = false;
+    } else {
+      CAJAMENSAJE.style.display = 'block';
+      MENSAJES.style.display = 'block';
+      mostrar = true;
+    }
+  });
+
+  TXTMENSAJE.addEventListener('keyup', function(e) {
+    let key = e.keyCode || e.witch;
+    if (key == 13) {
+      agregarMensaje();
+    }
+  });
+
+  function agregarMensaje() {
+    let valor = TXTMENSAJE.value;
+    if (valor.length > 0) {
+        //MENSAJES.innerHTML += getMsgCliente(valor);
+        getMsgCliente(valor)
+        TXTMENSAJE.value = '';
+        if (MENSAJES.scrollTop  < MENSAJES.scrollHeight - MENSAJES.clientHeight) {
+          MENSAJES.scrollTop += MENSAJES.clientHeight;
+        }
+    }
+  }
+
+  function getMsgCliente(msg){
+    let ctn = document.createElement('div');
+    let c = document.createElement('div');
+    let f = document.createElement('div');
+    let i = document.createElement('img');
+    f.classList.add('flecha-derecha');
+    i.classList.add('foto');
+    i.src = 'https://avatars0.githubusercontent.com/u/42211711?s=460&v=4';
+    ctn.classList.add('mensaje-cliente', 'mensaje');
+    c.classList.add('contenido');
+
+    c.appendChild(
+      document.createTextNode(msg)
+    );
+
+    ctn.appendChild(c);
+    ctn.appendChild(f);
+    ctn.appendChild(i);
+
+    MENSAJES.appendChild(ctn);
+    /*return `<div class="mensaje-cliente mensaje">
+        <div class="contenido">
+            ${msg}
+        </div>
+        <div class="flecha-derecha"></div>
+        <img src="https://avatars0.githubusercontent.com/u/42211711?s=460&v=4" alt="" class="foto">
+    </div>`;*/
+  }
+
+  </script>
+
+
+
+  </body>
+</html>
